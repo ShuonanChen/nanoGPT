@@ -101,6 +101,12 @@ Finally, on Apple Silicon Macbooks and with a recent PyTorch version make sure t
 
 A more serious deep learning professional may be more interested in reproducing GPT-2 results. So here we go - we first tokenize the dataset, in this case the [OpenWebText](https://openwebtext2.readthedocs.io/en/latest/), an open reproduction of OpenAI's (private) WebText:
 
+but before that you would need to downgrade your `dataset` library from huggingface
+```sh
+pip install datasets==3.6.0
+```
+please refer to [this link](https://github.com/huggingface/datasets/issues/7693) for why.
+
 ```sh
 python data/openwebtext/prepare.py
 ```
